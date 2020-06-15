@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact Us</title>
+    </head>
+    <body>
+<h1>
+    Contact Us
+</h1>
+<form>
+    <fieldset>
+    <legend>Your Information:</legend>
+    <p>
+        <Label>first Name: <input type="text" placeholder="Enter your first name here">
+       </Label>
+    </p>  
+   <p>
+       <Label>Last Name: <input type="text" placeholder="Enter your last name here">
+        </Label>
+   </p>  
+   <p>
+    <Label>Email: <input type="text" placeholder="Enter your email address here">
+     </Label>
+</p>
+<p>
+    <Label>Phone Numer: <input type="text" placeholder="Enter your phone number here">
+     </Label>
+</p>
+    </fieldset>
+    <fieldset>
+        <legend>About you:</legend>
+    <div>
+        <div>
+          <label for="product-select">How often do you run?</label>
+        </div>
+        <div>
+          <select name="product" id="product-select">
+            <option value="">-- Please select how often you run --</option>
+            <option value="1-2 times a week">1-2 times a week</option>
+            <option value="3-4 times a week">3-4 times a week</option>
+            <option value="5-6 times a week">5-6 times a week</option>
+            <option value="1 to 3 times a month">1 to 3 times a month</option>
+          </select>
+        </div>
+      </div>
+      <div>
+      <legend>What part of your body is most likely to get injured?</legend>
+  
+      <input type="radio" id="ankle" name="ankle">
+      <label for="ankle">Ankle</label><br/>
+  
+      <input type="radio" id="Knee" name="Knee">
+      <label for="Knee">Knee</label><br/>
+
+      <input type="radio" id="Back/Hip" name="Back/Hip">
+      <label for="Back/Hip">Back/Hip</label><br/>
+ <div>
+     <div>
+         <label for="comments">Comments:</label>
+    </div>
+    <div>
+ <textarea
+     id="comments"
+     name="comments"
+    rows="5"
+    cols="25"
+     ></textarea>
+    </div>
+    </div>
+    </p>
+    <div>
+        <input type="checkbox" id="signup" name="topics" value="signup"/>
+        <label for="Sign me up for email updates">Sign me up for email updates</label>
+    </div>
+    <input type="submit" value="Submit">
+    <!--<buttontype="submit"></button>-->
+    <input type="Reset">
+</fieldset>
+</form>
+<li><a href="contact.html">Contact Us</a></li>
+<a href="index.html"><img src="images/home.jpg" alt="home" title="home icon" width="50" height="50"/> </a>
+</body>
+</html>
