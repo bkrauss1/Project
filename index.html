@@ -3,31 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>On the Run</title>
+    <meta name="description" content="running tips and helpful resources for runners of all skill levels">
+    <meta name="keywords" content="running, running tips, running help, run, running shoes, yoga for runners, running blogs, blog for runners, stretches for runners, running stretches">
+    <title>Homepage</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+      img {
+        width: 100px;
+        margin-bottom: 10px;
+        vertical-align: 45px;
+      }
+      img:hover {
+        transform: scale(1.01);
+      }
+      #homepageimages {
+ 
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+    </style>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169818397-1"></script>
+ <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+ 
+   gtag('config', 'UA-169818397-1');
+ </script>
   </head>
   <body>
-  <h1>On the Run</h1>
-  <h3>
-    <img src="media/runner.jpg"alt="runner" title="runner on pier">
-  </h3>
-  <h2>About Us</h2>
-  <p>
-      Here at On the Run, we deliver helpful and easy running recovery and injury prevention advice. 
-  </p>
-  <h2>Resources</h2>
-<p>
-  On the Run looks to curate helpful videos, photo deomstrations, and catered recovery programs to help you become the best runner you can be. Below are some of our most helpful resources including our favorite stretches and a contact us page to help our team deliver a custom recovery program to you!
-</p>
-<h3>
-    <ul>
-<li> <a href="stretches.html">Our Favorite Stretches</a></li>
-<li> <a href="yoga.html">Recovery Yoga</a></li>
-<li><a href="blogs.html">Runner's Blogs</a></li>
-<li><a href="shoes.html">What Shoe is Right for You?</a></li>
-<li><a href="contact.html">Contact Us</a></li>
-<li><a href="sitemap.html">Sitemap</a></li>
-<a href="index.html"><img src="images/home.jpg" alt="home" title="home icon" width="50" height="50"/> </a>
-</ul>
-</h3>
-</body>
+    <header>
+      <div class="title">
+        <h1><a href="index.html">On the Run</a></h1>
+      </div>
+      <div class="dropdownlinks">
+        <a href="blogs.html">Blogs</a>
+        <a href="shoes.html">Shoes</a>
+        <a href="stretches.html">Stretches</a>
+        <a href="yoga.html">Yoga</a>
+        <a href="contact.html">Contact us</a>
+    </div>
+    <br>
+      <div class="Contact.Us">
+        <a href="contact.html"><button>Contact US</button></a>
+      </div>
+    </header>
+    <section class="body">
+      <li>
+      <div id="homepageimages">
+        <ul><a href="blogs.html"
+          ><img src="images/computer.jpg" alt="blogs" title="Runner Blogs"
+        /></a></ul>
+       <ul> <a href="shoes.html"
+          ><img src="images/sneaks.jpg" alt="shoes" title="Best Running shoes"
+        /></a></ul>
+       <ul> <a href="stretches.html"
+          ><img
+            src="images/runner.jpg"
+            alt="stretches"
+            title="Stretches for Runners"
+        /></a></ul>
+       <ul> <a href="yoga.html"
+          ><img src="images/yogacartoon.jpg" alt="yoga" title="Recovery Yoga"
+        /></a>
+      </div>
+      </li>
+    </section>
+    <footer>
+      <li>
+        <ul>
+      <a href="sitemap.html">site map</a></ul>
+      </li>
+    </footer>
+  </body>
 </html>
