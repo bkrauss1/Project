@@ -37,7 +37,7 @@ Here are some helpful diagrams and videos to get you started with yoga for runne
   type=video/ogg>
   </video>
 </p>
-<title>Sign Up for our Yoga Newsletter!</title>
+<h2>Sign Up for our Yoga Newsletter!</h2>
 <script type = "text/javascript"></script>
   <form name="myForm" onsubmit = "return(validate());">
   <table cellspacing = "2" cellpadding = "2" >
@@ -47,7 +47,7 @@ Here are some helpful diagrams and videos to get you started with yoga for runne
       <td><input type = "text" name = "Name"/></td>
     </tr>
     <tr>
-      <td align = "right">Email</td>
+      <td align = "right">email</td>
       <td><input type = "text" name = "email" /></td>
     </tr>
     <tr>
@@ -66,9 +66,9 @@ function validate(){
     document.myForm.Name.focus() ;
     return false;
   }
-  if (document.myForm.Email.value ==""){
+  if (document.myForm.email.value ==""){
     alert ("Please type your email");
-    document.myForm.Email.focus();
+    document.myForm.email.focus();
     return false;
   }
   return ( true);

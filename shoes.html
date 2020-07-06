@@ -6,6 +6,14 @@
     <title>What Shoe is Right for You?</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+         #animation { 
+    background-image: url(https://image.shutterstock.com/image-vector/man-run-cycle-animation-sprite-260nw-1063610867.jpg);
+    background-repeat: no-repeat; 
+    height: 102px; 
+    width: 140px; 
+}
+    </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169818397-1"></script>
 <script>
@@ -40,6 +48,7 @@ According to the running warehouse gear guide, finding your correct shoe size an
 </p>
 <button id="ask-btn">Find your Perfect Shoe</button>
 <p>Your Perfect Shoe: <span id="message"></span></p>
+<div id="animation"></div>
 <br>
 <br>
 <li class="contact"><a href="contact.html">Contact Us</a></li><a href="index.html"><img src="images/home.jpg" alt="home" title="home icon" width="50" height="50"/> </a>
@@ -73,7 +82,7 @@ According to the running warehouse gear guide, finding your correct shoe size an
           userInput === "13"||
           userInput === "14"||
           userInput === "15"
-          ) { msg.innerText = "You need a heavier show with more support"
+          ) { msg.innerText = "You need a heavier shoe with more support"
              }
       else {
             msg.innerText = "Please input a number from 1-15";
@@ -87,6 +96,16 @@ According to the running warehouse gear guide, finding your correct shoe size an
 
 
   }
+onload = function startAnimation() { 
+    var frameHeight = 102; 
+    var frames = 15; 
+    var frame = 0; 
+    var div = document.getElementById("animation"); 
+    setInterval(function () { 
+        var frameOffset = (++frame % frames) * -frameHeight; 
+        div.style.backgroundPosition = "0px " + frameOffset + "px"; 
+    }, 100); 
+} 
 </script>
 </body>
 </html>
