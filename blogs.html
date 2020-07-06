@@ -12,7 +12,7 @@
     Running Blogs
 </h1>
 <p>
-    Our team's favorite running blogs all in one place!
+    Our team's favorite running blogs all in one place! (click me to change color)
 </p>
 <p>
 <h2>
@@ -40,4 +40,14 @@ This resource focuses on getting stronger and faster all while preventing injury
 <br>
 <li class="contact"><a href="contact.html">Contact Us</a></li><a href="index.html"><img src="images/home.jpg" alt="home" title="home icon" width="50" height="50"/> </a>
 </body>
+<script>
+
+  document.querySelector('p').onclick = change;   
+
+  function change() {
+      document.body.style.color = "green";
+      return false;
+  }   
+
+</script>
 </html>
