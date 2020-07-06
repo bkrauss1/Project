@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex18</title>
+    <style>
+      img {
+        border-width: 10px;
+        border-style: solid;
+        border-color:blue;
+        size: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="images/outside-yoga.jpg" alt="outside" />
+    <p id="description"></p>
+
+    <script>
+      const slides = [
+        "images/outside-yoga.jpg",
+        "images/low-runner-lunge.jpg",
+        "images/twist-yoga.jpg",
+      ];
+
+      const colors = ["blue", "purple", "white"];
+      const textArray = [
+      "One Leg Elongated Pose",
+    "Low Runner Lunge Pose",
+    "Kneeling Twist Pose",
+      ]
+
+      let i = 0;
+
+      const image = document.querySelector("img");
+      const description = document.getElementById("description");
+
+      function slideShow() {
+        // console.log("running...");
+        if (i === slides.length) {
+          i = 0;
+        }
+        image.src = slides[i];
+        image.style.borderColor = colors[i];
+        description.innerText = textArray[i];
+
+        console.log(i);
+        i = i + 1;
+        
+        setTimeout(slideShow, 1500);
+      }
+
+      document.querySelector("body").onload = slideShow;
+    </script>
+  </body>
+</html>

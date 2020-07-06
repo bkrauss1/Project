@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recovery Yoga</title>
+    <style>
+      #yoga {
+        border-width: 10px;
+        border-style: solid;
+      }
+      </style>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -23,6 +29,7 @@
     <nav class="nav-bar">
     </div>
     <div class="dropdownlinks">
+      <a href="index.html">Home</a>
       <a href="blogs.html">Blogs</a>
       <a href="shoes.html">Shoes</a>
       <a href="stretches.html">Stretches</a>
@@ -41,11 +48,7 @@ Here are some helpful diagrams and videos to get you started with yoga for runne
 </p>
 <hr>
 <p>
-    <img src="images/yoga.jpg"alt="runner yoga" title="runners yoga"/>
-    <video id="vid" width="500" height="350" autoplay>
-      <source src="https://www.youtube.com/watch?v=0hTllAb4XGg"
-  type=video/ogg>
-  </video>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/0hTllAb4XGg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <h2>Sign Up for our Yoga Newsletter!</h2>
 <script type = "text/javascript"></script>
@@ -66,7 +69,10 @@ Here are some helpful diagrams and videos to get you started with yoga for runne
     </tr>
   </table>
   </form>
-  <br>
+<br>
+<img src="images/outside-yoga.jpg" alt="outside" height="315" width="560" id="yoga"/>
+<p id="description"></p>
+<br>
   <li class="contact"><a href="contact.html">Contact Us</a></li>
 <a href="index.html"><img src="images/home.jpg" alt="home" title="home icon" width="50" height="50"/> </a>
   <script type= "text/javascript">
@@ -83,6 +89,41 @@ function validate(){
   }
   return ( true);
 }
+const slides = [
+        "images/outside-yoga.jpg",
+        "images/low-runner-lunge.jpg",
+        "images/twist-yoga.jpg",
+      ];
+
+      const colors = ["blue", "purple", "white"];
+      const textArray = [
+      "One Leg Elongated Pose",
+    "Low Runner Lunge Pose",
+    "Kneeling Twist Pose",
+      ]
+
+      let i = 0;
+
+      const image = document.querySelector("img");
+      const description = document.getElementById("description");
+
+      function slideShow() {
+        // console.log("running...");
+        if (i === slides.length) {
+          i = 0;
+        }
+        image.src = slides[i];
+        image.style.borderColor = colors[i];
+        description.innerText = textArray[i];
+
+        console.log(i);
+        i = i + 1;
+        
+        setTimeout(slideShow, 1500);
+      }
+
+      document.querySelector("body").onload = slideShow;
+
 </script>
 </body>
 </html>
