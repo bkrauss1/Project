@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Favorite Stretches</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169818397-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-169818397-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'UA-169818397-1');
-</script>
+      gtag("config", "UA-169818397-1");
+    </script>
   </head>
   <body>
     <table>
@@ -26,7 +31,12 @@
           Calf Stretch
         </td>
         <td>
-          <img src="images/calf.jpg" alt="calf stretch" title="helpful calf stretch">
+          <img
+            src="images/calf.jpg"
+            alt="calf stretch"
+            title="helpful calf stretch"
+            id="calf"
+          />
         </td>
       </tr>
       <tr>
@@ -34,7 +44,12 @@
           Hamstring Stretch
         </td>
         <td>
-          <img src="images/hamstring.jpg" alt="hamstring stretch" title="helpful hamstring stretch">
+          <img
+            src="images/hamstring.jpg"
+            alt="hamstring stretch"
+            title="helpful hamstring stretch"
+            id="hamstring"
+          />
         </td>
       </tr>
       <tr>
@@ -42,11 +57,73 @@
           Quad Stretch
         </td>
         <td>
-          <img src="images/quad.jpg" alt="quad stretch" title="helpful quad stretch">
+          <img
+            src="images/quad.jpg"
+            alt="quad stretch"
+            title="helpful quad stretch"
+            id="quad"
+          />
         </td>
       </tr>
     </table>
     <li class="contact"><a href="contact.html">Contact Us</a></li>
-    <a href="index.html"><img src="images/home.jpg" alt="home" title="home icon" width="50" height="50"/> </a>
+    <a href="index.html"
+      ><img
+        src="images/home.jpg"
+        alt="home"
+        title="home icon"
+        width="50"
+        height="50"
+      />
+    </a>
+    <script>
+      function enlarge(imageID){
+         /*pseudocode
+         1. "get" the image
+          select the elements✔
+          assing the elements to a variable✔
+         2. "get" the width of the image
+          assign the width to a variable✔
+          3. increase the variable
+          - w = w*1.5✔
+          4. assign w back to width of the image
+         */
+      let x = document.getElementById(imageID);
+      let w = x.width;
+      w = w * 1.5;
+      x.width = w;
+
+      let h = document.querySelector("h1");
+      h.innerText = "Stretch";
+
+         console.log("Done!")
+      }
+
+
+      document.getElementById("calf").onmouseover =  function (){
+          enlarge("calf");
+      };
+      document.getElementById("hamstring").onmouseover =  function (){
+          enlarge("hamstring");
+      };
+      document.getElementById("quad").onmouseover =  function (){
+          enlarge("quad");
+      };
+      function resize(imageID){
+          let o = document.getElementById(imageID)
+          let r = o.width;
+          r = '400';
+          o.width = r;
+      }
+      document.getElementById("calf").onmouseout = function(){
+          resize("calf");
+      };
+      document.getElementById("hamstring").onmouseout = function(){
+          resize("hamstring");
+      };
+      document.getElementById("quad").onmouseout = function(){
+          resize("quad");
+      };
+  </script>
   </body>
 </html>

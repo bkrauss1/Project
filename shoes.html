@@ -38,6 +38,55 @@ According to the running warehouse gear guide, finding your correct shoe size an
   <li>Make sure they fit and wiggle your toes!</li>
 </ul>
 </p>
+<button id="ask-btn">Find your Perfect Shoe</button>
+<p>Your Perfect Shoe: <span id="message"></span></p>
+<br>
+<br>
 <li class="contact"><a href="contact.html">Contact Us</a></li><a href="index.html"><img src="images/home.jpg" alt="home" title="home icon" width="50" height="50"/> </a>
+<script>
+   // refactor-ing
+   function ask() {
+          // alert("message received!")
+          let userInput = prompt("How Many Miles do you Run per Week?");
+          let msg = document.getElementById("message");
+          if (
+            userInput.toLowerCase() === "1"||
+            userInput.toLowerCase() === "2"||
+            userInput.toLowerCase() === "3"||
+            userInput.toLowerCase() === "4"||
+            userInput.toLowerCase() === "5"
+          ) {
+            msg.innerText = "You need a lighter shoe"
+          }
+          else if
+          (userInput === "6"||
+          userInput === "7"||
+          userInput === "8"||
+          userInput === "9"||
+          userInput === "10"
+          ) {
+            msg.innerText = "You need a medium support shoe"
+          }
+          else if
+          (userInput === "11"||
+          userInput === "12"||
+          userInput === "13"||
+          userInput === "14"||
+          userInput === "15"
+          ) { msg.innerText = "You need a heavier show with more support"
+             }
+      else {
+            msg.innerText = "Please input a number from 1-15";
+            msgImage.src = "";
+          }
+   }
+
+        document.getElementById("ask-btn").onclick = ask;
+
+        function changeImage() {
+
+
+  }
+</script>
 </body>
 </html>
