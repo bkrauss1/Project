@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>demo for for loop</title>
+  </head>
+  <body>
+    <h1>for loop demo</h1>
+    <h4>Sum up all the odd integers from 0 to 100</h4>
+    <button>Calculate</button>
+    <p id="result"></p>
+    <div id="students"></div>
+
+    <script>
+      // const numbers = [2020, 6, 24, 6, 2, 45235, 564363, 63, 676857896, 89];
+
+      function calc() {
+        // let sum = 0 + 1 + 2 + 3 + 4 + 5;
+
+        let sum = 0;
+        /*         for (let i = 0; i < 101; i++) {
+          // console.log(numbers[i]);
+          // add the number to sum
+          if (i % 2 !== 0) {
+            sum += i;
+            console.log(
+              "in iteration " + i + ", we added " + i + ", sum became " + sum
+            );
+            console.log("");
+          } else {
+            console.log(
+              "in iteration " +
+                i +
+                ", we did not add " +
+                i +
+                ", sum is still " +
+                sum +
+                ", because i is not an even number."
+            );
+            console.log("");
+          }
+        } */
+
+        for (let i = 1; i < 101; i += 2) {
+          sum += i;
+        }
+
+        console.log("sum = " + sum);
+        document.getElementById("result").innerText = sum;
+
+        const roster = [
+          "Mariella",
+          "Scarlet",
+          "Nicolas",
+          "Jamie",
+          "Elina",
+          "Bridget",
+          "Emerson",
+          "Annie",
+          "Jiaxin",
+          "Marissa",
+          "Steven",
+          "Gabrielle",
+          "Sebastian",
+          "Yusra",
+          "Cristina",
+          "Anvesh",
+          "Ryan",
+          "Qilin",
+          "Shiyu",
+          "Xintong",
+        ];
+
+        for (let i = 0; i < roster.length; i++) {
+          let line =
+            "<p>" +
+            roster[i] +
+            ": " +
+            (60 + Math.floor(Math.random() * 40)) +
+            "</p>";
+          document.getElementById("students").innerHTML += line;
+        }
+      }
+
+      document.querySelector("button").onclick = calc;
+    </script>
+  </body>
+</html>
