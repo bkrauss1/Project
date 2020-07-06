@@ -23,3 +23,16 @@ body{
       list-style: none;
       word-spacing: 0;
   }
+  nav{
+    padding:0;
+    align-content: center;
+    list-style-type: none;
+    margin:0px;
+    text-align: center;
+    width: 100vw;
+    background-color: lightseagreen;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a:hover{
+  background-color:white;
+}
